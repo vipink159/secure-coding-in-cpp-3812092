@@ -28,7 +28,8 @@
 			"extensions": [
 				"ms-vscode.cpptools",
 				"ms-vscode.cmake-tools",
-				"linkedinlearning.linkedinlearning-vscode-theme"
+				"linkedinlearning.linkedinlearning-vscode-theme",
+				"ms-vscode.cpptools-extension-pack"
 			]
 		}
 	},
