@@ -3,24 +3,40 @@
 // Secure a data parsing function, by Eduardo Corpeño
 
 #include <iostream>
-#include <vector>
+#include <string>
+#include <map>
+#include <sstream>
 
-using std::vector;
+std::map<std::string, std::string> parseSettings(const std::string& input){
+    std::map<std::string, std::string> result;
+    std::istringstream ss(input);
+    std::string pair;
 
-double average(const vector<double>& numbers){
-    double sum = 0;
-    for(auto it = std::begin(numbers); it != std::end(numbers); ++it){
-        sum += *it;
+    while (std::getline(ss, pair, ';')){
+        size_t eq = pair.find('=');
+
+        // Unsafe: no check for missing '=', empty keys/values, or duplicates
+        std::string key = pair.substr(0, eq);
+        std::string value = pair.substr(eq + 1);
+
+        result[key] = value; // silently overwrites
     }
-    return sum / numbers.size();
+
+    return result;
 }
 
 int main(){
-    vector<double> numbers = {20, 10, 30, 27, 18};
-    double learnerResult = average(numbers);
-    
-    std::cout << "Your code returned: " << learnerResult << std::endl;
-    
-    std::cout << std::endl << std::endl;
+    std::string rawInput;
+    std::cout << "Enter settings (key=value;...): ";
+    std::getline(std::cin, rawInput);
+
+    auto settings = parseSettings(rawInput);
+
+    std::cout << "Parsed settings:\n";
+    for (const auto& [k, v] : settings){
+        std::cout << k << ": " << v << "\n";
+    }
+
+    std::cout << std::endl;
     return 0;
 }
