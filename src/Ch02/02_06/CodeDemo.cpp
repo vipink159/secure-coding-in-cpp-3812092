@@ -10,17 +10,17 @@
 
 bool isValidKey(const std::string& key){
     if (key.empty()) return false;
-    for (char c : key){
-        if (!std::isalnum(c) && c != '_') return false;
-    }
+    for (char c : key)
+        if (!std::isalnum(c) && c != '_') 
+            return false;
     return true;
 }
 
 bool isValidValue(const std::string& value){
     if (value.empty()) return false;
-    for (char c : value){
-        if (!std::isdigit(c)) return false;
-    }
+    for (char c : value)
+        if (!std::isdigit(c)) 
+            return false;
     return true;
 }
 
@@ -56,9 +56,8 @@ int main(){
     auto settings = parseSettings(rawInput);
 
     std::cout << "Parsed settings:\n";
-    for (const auto& [k, v] : settings){
+    for (const auto& [k, v] : settings)
         std::cout << k << ": " << v << "\n";
-    }
 
     std::cout << std::endl;
     return 0;

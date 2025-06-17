@@ -33,9 +33,8 @@ int main(){
     auto settings = parseSettings(rawInput);
 
     std::cout << "Parsed settings:\n";
-    for (const auto& [k, v] : settings){
+    for (const auto& [k, v] : settings)
         std::cout << k << ": " << v << "\n";
-    }
 
     std::cout << std::endl;
     return 0;
