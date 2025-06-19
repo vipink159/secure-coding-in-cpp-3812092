@@ -9,10 +9,9 @@
 int main(){
     std::string userInput;
     std::cout << "Enter a message: ";
-    std::getline(std::cin, userInput);
+    std::getline(std::cin, userInput); 
 
-    // Vulnerable: user controls the format string
-    std::printf(userInput.c_str()); // Dangerous if input contains %x, %n, etc.
+    std::printf(userInput.c_str()); 
 
     std::cout << std::endl << std::endl;
     return 0;
