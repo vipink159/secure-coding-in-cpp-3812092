@@ -1,6 +1,6 @@
 // Secure Coding in C++
 // Challenge Solution 03_06
-// Avoiding Leaks, by Eduardo Corpeño
+// Hacking the Hardcoded Password, by Eduardo Corpeño
 
 #include <iostream>
 #include <string>

@@ -1,23 +1,22 @@
 // Secure Coding in C++
-// Challenge Solution 04_06
-// Smart Pointers, by Eduardo Corpeño
+// Exercise 04_04
+// Safe Object Construction and Cleanup, by Eduardo Corpeño
 
 #include <iostream>
 #include <vector>
-#include <memory>
 
 class DataChunk{
-    std::unique_ptr<int[]> buffer;
+    int* buffer;
     size_t size;
 
 public:
     DataChunk(size_t s) : size(s){
-        buffer = std::make_unique<int[]>(size);
+        buffer = new int[size];
         std::cout << "Allocated " << size * sizeof(int) / 1024 << " KB" << std::endl;
     }
 
     void fill(int value){
-        for(size_t i = 0; i < size; ++i)
+        for (size_t i = 0; i < size; ++i)
             buffer[i] = value;
     }
 };
