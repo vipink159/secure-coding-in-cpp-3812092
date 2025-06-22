@@ -22,7 +22,7 @@ int main(){
     FILE* f = fopen("sample.txt", "w");  // forget to close = resource leak
     if (f){
         fputs("This is a test.\n", f);
-        // fclose(f);  // commented out to simulate forgetting
+        fclose(f);  // must remember to close
     }
 
     std::cout << std::endl << std::endl;

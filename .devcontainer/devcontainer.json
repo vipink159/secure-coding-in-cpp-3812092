@@ -29,7 +29,9 @@
 				"ms-vscode.cpptools",
 				"ms-vscode.cmake-tools",
 				"linkedinlearning.linkedinlearning-vscode-theme",
-				"ms-vscode.cpptools-extension-pack"
+				"ms-vscode.cpptools-extension-pack",
+                "github.copilot",
+                "github.copilot-chat"
 			]
 		}
 	},

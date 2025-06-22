@@ -12,22 +12,22 @@ std::map<std::string, std::string> parseSettings(const std::string& input){
     std::istringstream ss(input);
     std::string pair;
 
-    while (std::getline(ss, pair, ';')){
+    while (std::getline(ss, pair, ',')){
         size_t eq = pair.find('=');
 
-        // Unsafe: no check for missing '=', empty keys/values, or duplicates
+        // Unsafe: no check for missing '=', empty keys or values, 
+        // duplicate keys, spaces, or non-numeric values.
         std::string key = pair.substr(0, eq);
         std::string value = pair.substr(eq + 1);
 
         result[key] = value; // silently overwrites
     }
-
     return result;
 }
 
 int main(){
     std::string rawInput;
-    std::cout << "Enter settings (key=value;...): ";
+    std::cout << "Enter settings (key=value,key=value,...): ";
     std::getline(std::cin, rawInput);
 
     auto settings = parseSettings(rawInput);

@@ -11,7 +11,6 @@ int main(){
     std::cout << "Enter a message: ";
     std::getline(std::cin, userInput);
 
-    // Safe: use fixed format string
     std::printf("%s", userInput.c_str()); 
 
     std::cout << std::endl << std::endl;

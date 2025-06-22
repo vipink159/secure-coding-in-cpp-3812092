@@ -29,7 +29,7 @@ std::map<std::string, std::string> parseSettings(const std::string& input){
     std::istringstream ss(input);
     std::string pair;
 
-    while (std::getline(ss, pair, ';')){
+    while (std::getline(ss, pair, ',')){
         size_t eq = pair.find('=');
 
         if (eq == std::string::npos || eq == 0 || eq == pair.size() - 1)
@@ -44,13 +44,12 @@ std::map<std::string, std::string> parseSettings(const std::string& input){
 
         result[key] = value;
     }
-
     return result;
 }
 
 int main(){
     std::string rawInput;
-    std::cout << "Enter settings (key=value;...): ";
+    std::cout << "Enter settings (key=value,key=value,...): ";
     std::getline(std::cin, rawInput);
 
     auto settings = parseSettings(rawInput);

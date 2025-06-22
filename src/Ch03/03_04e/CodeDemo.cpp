@@ -12,8 +12,7 @@ void log(const std::string& msg){
 int main(){
     std::string username, password;
     std::cout << "Username: ";
-    std::cin >> username;
-    std::cin.ignore();
+    std::getline(std::cin, username);
 
     std::cout << "Password: ";
     system("stty -echo");

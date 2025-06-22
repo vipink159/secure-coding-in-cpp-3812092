@@ -12,10 +12,10 @@ void log(const std::string& msg){
 int main(){
     std::string username, password;
     std::cout << "Username: ";
-    std::cin >> username;
+    std::getline(std::cin, username);
 
     std::cout << "Password: ";
-    std::cin >> password;
+    std::getline(std::cin, password);
 
     log("User '" + username + "' attempted login with password: " + password);
 
