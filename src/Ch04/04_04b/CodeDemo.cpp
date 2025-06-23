@@ -1,6 +1,6 @@
 // Secure Coding in C++
 // Exercise 04_04
-// Safe Object Construction and Cleanup, by Eduardo Corpeño
+// Avoiding Memory Leaks, by Eduardo Corpeño
 
 #include <iostream>
 #include <vector>
