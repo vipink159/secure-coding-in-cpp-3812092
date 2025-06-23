@@ -28,7 +28,6 @@ int main(){
         // Optional: rethrow or exit gracefully
     }
 
-    std::cout << "Program continues..." << std::endl;
-    std::cout << std::endl;
+    std::cout << std::endl << std::endl;
     return 0;
 }
