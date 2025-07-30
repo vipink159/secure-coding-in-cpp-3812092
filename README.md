@@ -5,36 +5,13 @@ This is the repository for the LinkedIn Learning course `Secure Coding in C++`. 
 
 ## Course Description
 
-_See the readme file in the main branch for updated instructions and information._
-## Instructions
-This repository has branches for each of the videos in the course. You can use the branch pop up menu in github to switch to a specific branch and take a look at the course at that stage, or you can add `/tree/BRANCH_NAME` to the URL to go to the branch you want to access.
-
-## Branches
-The branches are structured to correspond to the videos in the course. The naming convention is `CHAPTER#_MOVIE#`. As an example, the branch named `02_03` corresponds to the second chapter and the third video in that chapter. 
-Some branches will have a beginning and an end state. These are marked with the letters `b` for "beginning" and `e` for "end". The `b` branch contains the code as it is at the beginning of the movie. The `e` branch contains the code as it is at the end of the movie. The `main` branch holds the final state of the code when in the course.
-
-When switching from one exercise files branch to the next after making changes to the files, you may get a message like this:
-
-    error: Your local changes to the following files would be overwritten by checkout:        [files]
-    Please commit your changes or stash them before you switch branches.
-    Aborting
-
-To resolve this issue:
-	
-    Add changes to git using this command: git add .
-	Commit changes using this command: git commit -m "some message"
-
-## Installing
-1. To use these exercise files, you must have the following installed:
-	- [list of requirements for course]
-2. Clone this repository into your local machine using the terminal (Mac), CMD (Windows), or a GUI tool like SourceTree.
-3. [Course-specific instructions]
+<p>Learn how to write secure C++ code by addressing the language’s most common risks and vulnerabilities. This course focuses on practical, code-level techniques for preventing exploits related to input handling, memory misuse, and object lifetime. You'll use modern C++ features and secure coding standards to harden your code. This course is an ideal fit for developers who want to learn how to build safer, more resilient applications.</p><p>This course is integrated with GitHub Codespaces, an instant cloud developer environment that offers all the functionality of your favorite IDE without the need for any local machine setup. With GitHub Codespaces, you can get hands-on practice from any machine, at any time, all while using a tool that you’ll likely encounter in the workplace. Check out “Using GitHub Codespaces" with this course to learn how to get started.</p>
 
 ## Instructor
 
-Instructor name
+Eduardo Corpeño
 
-Instructor description
+Electrical Engineer, Computer Programmer, and Teacher for 15+ years
 
                             
 
@@ -43,5 +20,5 @@ Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learn
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
 
-[lil-course-url]: https://www.linkedin.com/learning/
-[lil-thumbnail-url]: https://media.licdn.com/dms/image/v2/D4E0DAQG0eDHsyOSqTA/learning-public-crop_675_1200/B4EZVdqqdwHUAY-/0/1741033220778?e=2147483647&v=beta&t=FxUDo6FA8W8CiFROwqfZKL_mzQhYx9loYLfjN-LNjgA
+[lil-course-url]: https://www.linkedin.com/learning/secure-coding-in-c-plus-plus
+[lil-thumbnail-url]: https://media.licdn.com/dms/image/v2/D560DAQGhqpuJvT-JCw/learning-public-crop_675_1200/B56ZhXR.ICHcAc-/0/1753810985728?e=2147483647&v=beta&t=x_25W4Xcw_S8EVNat9kqW-P1tHIymGNTV_kj5ID9-9E
