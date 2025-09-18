@@ -1,4 +1,4 @@
-# Secure Coding in C++
+# Secure Coding in C++ 
 This is the repository for the LinkedIn Learning course `Secure Coding in C++`. The full course is available from [LinkedIn Learning][lil-course-url].
 
 ![lil-thumbnail-url]
