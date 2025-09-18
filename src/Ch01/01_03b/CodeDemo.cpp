@@ -3,26 +3,30 @@
 // Safer Alternatives in Modern C++, by Eduardo Corpeño
 
 #include <iostream>
-#include <cstring>   // For strcpy, strlen
-#include <cstdlib>   // For malloc, free
+#include <string>
+#include <array>
+#include <fstream>
+#include <limits>
 
 int main(){
 
-    // 1. Raw pointers for dynamic memory
-    char* name = (char*)malloc(100);  // dangerous: manual memory management
-    strcpy(name, "Eduardo");
+    std::string name = "Eduardo";
     std::cout << "Name: " << name << std::endl;
-    free(name);  // must remember to free
 
     // 2. C-style arrays with fixed size
-    int scores[5] = {95, 88, 76, 100, 67};  // no bounds checking
-    std::cout << "Accessing 6th score (out of bounds): " << scores[5] << std::endl;  // undefined behavior
+    std::array<int, 5> scores = {95, 88, 76, 100, 67};  // no bounds checking
+    try{
+        std::cout << "Accessing 6th score (out of bounds): " << scores.at(5) << std::endl;  // undefined behavior
+    } catch(const std::out_of_range& e){
+        std::cerr << "Caught out_of_range error: " << e.what() << std::endl;
+    }
 
     // 3. Manual resource management (FILE*)
-    FILE* f = fopen("sample.txt", "w");  // forget to close = resource leak
-    if (f){
-        fputs("This is a test.\n", f);
-        fclose(f);  // must remember to close
+    std::fstream ofs("sample.txt");
+    if(ofs){
+        ofs << "This is a test.\n";
+    } else {
+        std::cerr << "Failed to open file." << std::endl;
     }
 
     std::cout << std::endl << std::endl;
